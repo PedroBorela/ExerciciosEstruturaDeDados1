@@ -1,9 +1,11 @@
-import java.util.*;;
+import java.util.*;
 
-public class Exercicio2 {
+public class Exercicios {
  
     public static void main(String[] args){
     Scanner sc= new Scanner(System.in);
+
+    try{
         System.out.println("Informe um número:");
         double p =sc.nextInt();
 
@@ -11,6 +13,9 @@ public class Exercicio2 {
         System.out.println(total);
 
         sc.close();
+    }catch(Exception e){
+        System.out.println("Não é uma entrada válida");
+    }
 
     }
 
