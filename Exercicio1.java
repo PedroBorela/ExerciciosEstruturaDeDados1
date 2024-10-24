@@ -7,8 +7,10 @@ public class Exercicio1{
         
 
         Scanner sc=new Scanner(System.in);
+        try{
         System.out.print("\nInforme um número: ");
         int numSugerido = sc.nextInt();
+        
 
         System.out.println("Que operação deseja realizar?\n (1)Fibonacci\n(2)Fatorial");
         int escolha = sc.nextInt();
@@ -31,6 +33,9 @@ public class Exercicio1{
        
     
         sc.close();
+    }catch(Exception e){
+        System.out.println("Não é um número");
+    }
         
 
     }
