@@ -34,7 +34,7 @@ public class Exercicio1{
     
         sc.close();
     }catch(Exception e){
-        System.out.println("Não é um número");
+        System.out.println("Não é um número válido");
     }
         
 
@@ -42,16 +42,22 @@ public class Exercicio1{
 
     public static void Fibonacci(int num){
         int numAnterior=0,numAtual=1,numProximo=0;
+        int[] numeros= new int[num+1];
         System.out.print("===========================");
 
         if(num>0){
             for(int i=0;i<num;i++){
+                if(i==0){
+                System.out.printf("\nO %dº número fibonacci é %d",i+1,numAnterior);
+
+                }else{
                 numProximo=numAnterior+numAtual;
                 numAnterior=numAtual;
                 numAtual=numProximo;
-                
+                numeros[i]=numAnterior;
+                System.out.printf("\nO %dº número fibonacci é %d",i+1,numAnterior);
+                }
             }
-            System.out.printf("\nO %dº número fibonacci é %d",num,numAnterior);
             }else{
         
             System.out.print("\nO número não pode ser negativo");
